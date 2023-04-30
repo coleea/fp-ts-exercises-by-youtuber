@@ -23,17 +23,22 @@ console.log(
 //     return prev + Math.max(arr1.at(i) ? arr1.at(i)! : -Infinity, arr2.at(i) ? arr2.at(i)! : -Infinity)
 // }
 
+const sum = (prev: number, curr: number) => prev + curr
+
+const getBigger = (pair : number[])  => Math.max(...pair) 
+
 function doSomethingFpts(arr1 : number[], arr2 : number[])  {
     return pipe(
         A.zip(arr1, arr2),
-        A.map((pair : number[])  => Math.max(...pair)),
-        (biggerArr) => biggerArr.reduce((prev, curr) => prev + curr , 0)
+        A.map(getBigger),
+        A.reduce(0, sum),
+        // (biggerArr) => biggerArr.reduce(sum , 0)
     )
 
     // const zipped = A.zip(arr1, arr2)
     // const biggerArr = A.map((pair : number[])  => Math.max(...pair))(zipped)
     // return biggerArr.reduce((prev, curr) => prev + curr , 0)
-    
+
     // A.reduce()
     // console.log(zipped);
     
