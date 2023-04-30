@@ -7,7 +7,8 @@ function someFn() {
 
     pipe(
         O.Do,
-        O.bind("aOpt", () => aOpt),
-        O.bind("bOpt", () => bOpt)
+        O.bind("a", () => aOpt),
+        O.bind("b", ({a}) => bOpt),
+        O.map(({a, b}) => a + b)
     )
 }
