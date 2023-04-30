@@ -1,3 +1,6 @@
+// title : Are you making the most of fp-ts Option?
+// https://www.youtube.com/watch?v=GyYME8btMHE
+
 import parseUrl from "parse-url" ; 
 import * as O from 'fp-ts/Option'
 import * as A from 'fp-ts/Array'

@@ -1,3 +1,6 @@
+// title : If I were starting with fp-ts in TypeScript
+// https://www.youtube.com/watch?v=Zbu7flpYnGc
+
 import * as O from 'fp-ts/Option'
 import * as A from 'fp-ts/Array'
 import { pipe} from 'fp-ts/function'
