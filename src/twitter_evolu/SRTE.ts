@@ -1,4 +1,4 @@
-// by evolu
+// originally written by evolu
 // https://twitter.com/evoluhq/status/1530920057303449601/photo/1
 
 import { flow } from 'fp-ts/lib/function'
@@ -26,10 +26,10 @@ const multiplyThreeTimes = flow(
     SRTE.chain(multiply),
 )
 
-const operand = 2
+const initValue = 10
 const config = {logs : ["initialize log"]}
-const dependencies = {multiplier : operand}
+const dependencies = {multiplier : 2}
 
-multiplyThreeTimes(operand)(config)(dependencies)()
+multiplyThreeTimes(initValue)(config)(dependencies)()
 .then(res => console.log(JSON.stringify(res)))
 .catch(console.log)
